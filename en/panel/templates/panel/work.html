@@ -1,0 +1,39 @@
+{% extends 'panel/basetwo.html' %}
+{% load static %}
+{% block section %}
+  <!-- Start Sing In Area -->
+  <section class="sing-in-area ptb-100">
+    <div class="container">
+        <div class="contact-wrap-form sing-in-width">
+            <div class="scetion-title text-center" style="margin-bottom: 30px;">
+                <span>همکاری با ما</span>
+                <h2>ایمیل و تخصص خود را وارد نمایید!</h2>
+                <p class="recover-text">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد<a href="contact.html">ارتباط با ما.</a>
+                </p>
+            </div>
+            <form method="post">
+                <div class="row">
+                    <div class="form-group col-12">
+                        <input type="email" class="form-control" placeholder="ایمیل خود را وارد نمایید" required>
+                    </div>
+                    <div class="form-group col-12">
+                        <input type="email" class="form-control" placeholder="تخصص خود را وارد نمایید" required>
+                    </div>
+                </div>
+
+                <div class="col-12 text-center">
+                    <div class="sign text-center padding-top-60 padding-bottom-20">
+                        <button type="submit" class="border-btn black js-pointer-large">
+                            <span class="border-btn__inner">درخواست همکاری</span>
+                            <span class="border-btn__lines-1"></span>
+                            <span class="border-btn__lines-2"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- End Sing In Area -->
+{% endblock %}

@@ -96,7 +96,7 @@ html.has-scroll-smooth{overflow:hidden}html.has-scroll-dragging{-webkit-user-sel
 }
 
 /* Psuedo-element chars */
-.splitting .char {
+.splitting .word {
   position: relative;
 }
 
@@ -105,9 +105,9 @@ html.has-scroll-smooth{overflow:hidden}html.has-scroll-dragging{-webkit-user-sel
  * Set to `display: none` by default; just add `display: block` when you want
  * to use the psuedo elements
  */
-.splitting .char::before,
-.splitting .char::after {
-  content: attr(data-char);
+.splitting .word::before,
+.splitting .word::after {
+  content: attr(data-word);
   position: absolute;
   top: 0;
   left: 0;
@@ -121,39 +121,27 @@ html.has-scroll-smooth{overflow:hidden}html.has-scroll-dragging{-webkit-user-sel
 .splitting {
   /* The center word index */
   --word-center: calc((var(--word-total) - 1) / 2);
-
-  /* The center character index */
-  --char-center: calc((var(--char-total) - 1) / 2);
-
   /* The center character index */
   --line-center: calc((var(--line-total) - 1) / 2);
 }
 
-.splitting .word {
-  /* Pecent (0-1) of the word's position */
-  --word-percent: calc(var(--word-index) / var(--word-total));
-
-  /* Pecent (0-1) of the line's position */
-  --line-percent: calc(var(--line-index) / var(--line-total));
-}
-
 .splitting .char {
   /* Percent (0-1) of the char's position */
-  --char-percent: calc(var(--char-index) / var(--char-total));
+  --word-percent: calc(var(--word-index) / var(--word-total));
 
   /* Offset from center, positive & negative */
-  --char-offset: calc(var(--char-index) - var(--char-center));
+  --word-offset: calc(var(--word-index) - var(--word-center));
 
   /* Absolute distance from center, only positive */
   --distance: calc(
-     (var(--char-offset) * var(--char-offset)) / var(--char-center)
+     (var(--word-offset) * var(--word-offset)) / var(--word-center)
   );
 
   /* Distance from center where -1 is the far left, 0 is center, 1 is far right */
-  --distance-sine: calc(var(--char-offset) / var(--char-center));
+  --distance-sine: calc(var(--word-offset) / var(--word-center));
 
   /* Distance from center where 1 is far left/far right, 0 is center */
-  --distance-percent: calc((var(--distance) / var(--char-center)));
+  --distance-percent: calc((var(--distance) / var(--word-center)));
 }
 
 .splitting img { width: 100%; display: block; }
