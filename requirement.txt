@@ -80,5 +80,3 @@ ueberzug==18.1.9
 uritemplate==3.0.1
 urllib3==1.26.6
 virtualenv==20.8.0
-webencodings==0.5.1
-zipp==3.5.0
