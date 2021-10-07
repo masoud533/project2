@@ -3,13 +3,26 @@ from django.urls import path, re_path
 from . import views
 
 urlpatterns = [
-    # path('', views.panel, name='panel'),
-    # # ex: /panel/
-    path('', views.home, name='home'),
-    # ex: /panel/
-    path('<int:question_id>/detail', views.detail, name='detail'),
-    # ex: /polls/5/detail/
-    path('<int:question_id>/results/', views.results, name='results'),
-    # ex: /polls/5/results/
-]
 
+    # # ex: /
+    path(r'', views.HomePageView.as_view(), name='home'),
+
+    # # ex: /about
+    path(r'about/', views.AboutPageView.as_view(), name='about'),
+
+    # # ex: /services
+    path(r'services/', views.ServicesPageView.as_view(), name='services'),
+
+    # # ex: /other-services
+    path(r'other-services/', views.OtherServicesPageView.as_view(), name='other-services'),
+
+    # # ex: /work
+    path(r'work/', views.WorkPageView.as_view(), name='work'),
+
+    # # ex: /contact
+    path(r'contact/', views.ContactPageView.as_view(), name='contact'),
+
+    # # ex: /portfolio
+    path(r'portfolio/', views.PortfolioPageView.as_view(), name='portfolio'),
+
+]
