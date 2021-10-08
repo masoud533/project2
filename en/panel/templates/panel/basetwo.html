@@ -14,19 +14,19 @@
     <meta name="keywords" content="creative, modern, clean, html5, css3, portfolio, blog, agency, templates, minimal">
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="{% static 'panel/images/favicon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'panel/images/apple-touch-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'panel/images/apple-touch-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'panel/images/apple-touch-icon-114x114.png' %}">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/signupcss/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'panel/css/signupcss/bootstrap.min.css' %}">
     <!-- Boxicons CSS -->
-    <link rel="stylesheet" href="assets/css/signupcss/boxicons.min.css">
+    <link rel="stylesheet" href="{% static 'panel/css/signupcss/boxicons.min.css' %}">
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="assets/css/signupcss/responsive.css">
+    <link rel="stylesheet" href="{% static 'panel/css/signupcss/responsive.css' %}">
     <!-- RTL CSS -->
-    <link rel="stylesheet" href="assets/css/signupcss/rtl.css">
+    <link rel="stylesheet" href="{% static 'panel/css/signupcss/rtl.css' %}">
     <style>
         .custom-control-inline {
             margin-left: 3rem;
@@ -66,8 +66,8 @@
         rel="stylesheet">
 
     <!-- styles -->
-    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="{% static 'panel/css/plugins.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'panel/css/style.css' %}" rel="stylesheet" type="text/css">
 </head>
 
 <body class="preloader cursor-anim-enable">
@@ -177,7 +177,7 @@
 
         <!-- nav-btn-box start -->
         <li class="nav-btn-box js-nav-bg-change js-dropdown-open">
-            <a href="/portfolio" class="nav-btn dropdown-hidden-btn js-pointer-large">
+            <a href="/portfolio" class="nav-btn dropdown-hidden-btn js-animsition-link js-pointer-large">
                 <span class="nav-btn__inner" data-text="طراحی حرفه ای">
                     طراحی حرفه ای
                 </span>
@@ -192,7 +192,7 @@
 
         <!-- nav-btn-box start -->
         <li class="nav-btn-box js-nav-bg-change js-dropdown-open">
-            <a href="/work" class="nav-btn dropdown-hidden-btn js-pointer-large">
+            <a href="/work" class="nav-btn dropdown-hidden-btn js-animsition-link js-pointer-large">
                 <span class="nav-btn__inner" data-text="همکاری با ما">
                     همکاری با ما
                 </span>
@@ -372,14 +372,14 @@
     </div><!-- scroll-content end -->
 
     <!-- scripts -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'panel/js/plugins.js' %}"></script>
+    <script src="{% static 'panel/js/main.js' %}"></script>
 
 
     <!-- Popper Min JS -->
-    <script src="assets/js/signupjs/popper.min.js"></script>
+    <script src="{% static 'panel/js/signupjs/popper.min.js' %}"></script>
     <!-- Bootstrap Min JS -->
-    <script src="assets/js/signupjs/bootstrap.min.js"></script>
+    <script src="{% static 'panel/js/signupjs/bootstrap.min.js' %}"></script>
 
 
 </body>

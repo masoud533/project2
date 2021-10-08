@@ -4658,11 +4658,11 @@ textarea {
 
 p {
 	margin: 0;
-	font-family: 'Lato', sans-serif;
+	font-family: iranyekan;
 }
 
 a {
-	font-family: 'Lato', sans-serif;
+	font-family: iranyekan;
 	text-decoration: none;
 }
 
@@ -4673,7 +4673,7 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	font-family: 'Lato', sans-serif;
+	font-family: iranyekanbold;
 	line-height: 1.2;
 }
 
@@ -4843,7 +4843,6 @@ h6 {
    ========================================================================== */
 
 .headline-uppercase {
-	letter-spacing: 3px;
 	text-transform: uppercase;
 }
 
@@ -4858,32 +4857,40 @@ h6 {
 	font-family: iranyekanbold;
 	font-size: 86px;
 	font-weight: 700;
-	line-height: 1.2;
+	line-height: 1.4;
 }
 
 .headline-xxl {
-	font-family: 'Lato', sans-serif;
+	font-family: iranyekanbold;
 	font-size: 78px;
 	font-weight: 700;
 	line-height: 1.2;
+	direction: rtl;
 }
 
 .headline-xl {
-	font-family: 'Lato', sans-serif;
+	font-family: iranyekanbold;
 	font-size: 70px;
 	font-weight: 700;
 	line-height: 1.2;
 }
 
 .headline-l {
-	font-family: 'Lato', sans-serif;
+	font-family: iranyekanbold;
 	font-size: 62px;
 	font-weight: 700;
 	line-height: 1.2;
 }
 
+.price-title-border > .headline-l {
+	font-family: iranyekanbold;
+	font-size: 35px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
 .headline-m {
-	font-family: 'Lato', sans-serif;
+	font-family: iranyekanbold;
 	font-size: 54px;
 	font-weight: 700;
 	line-height: 1.2;
@@ -5182,7 +5189,7 @@ h6 {
 }
 
 .subhead-s {
-	font-family: 'Lato', sans-serif;
+	font-family: iranyekan;
 	font-size: 18px;
 	font-weight: 300;
 	line-height: 1.4;
@@ -5894,9 +5901,10 @@ body .content-bg-dark .anim-img-reveal:before {
 	overflow: hidden;
 	width: 0%;
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 50%;
 	white-space: nowrap;
+	direction: rtl;
 	-webkit-transform: translateY(-50%);
 	        transform: translateY(-50%);
 	transition: 1.5s cubic-bezier(.225, 1, .316, .99);
@@ -6248,13 +6256,13 @@ body .hover-stroke-fill-black:before {
 
 .text-left-offset {
 	display: inline-block;
-	margin-right: -40%;
+	margin-left: -40%;
 	z-index: 2;
 }
 
 .text-right-offset {
 	display: inline-block;
-	margin-left: -40%;
+	margin-right: -40%;
 	z-index: 2;
 }
 
