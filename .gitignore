@@ -4,3 +4,4 @@ en/.ide/
 en/config/settings.py
 en/panel/migrations/*initial.py
 /websaz/
+**/__pycache__/**
