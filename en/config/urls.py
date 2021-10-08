@@ -22,6 +22,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path(r'admin/', admin.site.urls),
     path(r'', include('panel.urls')),
+    path('ckeditor', include('ckeditor_uploader.urls')),
+
 
 ]
 

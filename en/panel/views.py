@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import Http404
 from django.views.generic import TemplateView
 
-from .models import Question, HomeSlider
+from .models import HomeSlider, Plans
 
 
 # Create your views here.
@@ -22,7 +22,15 @@ class AboutPageView(TemplateView):
 
 
 class ServicesPageView(TemplateView):
-    template_name = "panel/services.html"
+    def get(self, request, **kwargs):
+        plans_list = Plans.objects.order_by('-pub_date')
+        for plan in plans_list:
+            plan.feature = plan.feature.split('\r\n')
+        context = {
+            'plans_list': plans_list,
+        }
+        return render(request, 'panel/services.html', context)
+
 
 
 class OtherServicesPageView(TemplateView):
@@ -39,3 +47,7 @@ class ContactPageView(TemplateView):
 
 class PortfolioPageView(TemplateView):
     template_name = "panel/portfolio.html"
+
+
+class PaymentPageView(TemplateView):
+    template_name = "panel/payment.html"
