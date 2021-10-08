@@ -1,6 +1,6 @@
-.venv
+/.venv/
 en/db.sqlite3
-en/.ide/
+/en/.ide/
 en/config/settings.py
 en/panel/migrations/*initial.py
 /websaz/
