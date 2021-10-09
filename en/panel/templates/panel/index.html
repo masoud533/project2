@@ -616,37 +616,66 @@
                 </div>
             </section><!-- advantages end -->
 
-            <!-- team start -->
+            <!-- teams start -->
             <section class="padding-top-bottom-120 container small">
-                <h2 class="headline-xxxl text-color-black anim-split-lines" data-scroll
-                    data-scroll-offset="20%">Our Creative Team</h2>
-                {% for member in team_members %}
+                <h2 class="headline-xxxl text-color-black anim-split-lines" data-scroll data-scroll-offset="20%">Our
+                    Creative Team</h2>
+                {% for team in team_members %}
                     <!-- flex-container start -->
-                    <div class="flex-container flex-align-center padding-top-60">
-                        <div class="six-columns padding-top-30">
-                            <div class="hidden-box">
-                                <div data-scroll data-scroll-speed="-1.2">
-                                    <div class="anim-img-reveal" data-scroll
->
-                                        <img src="{% static member.image %}"
-                                             alt="Jason Hardeman">
+                    {% if forloop.counter|divisibleby:2 %}
+                        <div class="flex-container reverse flex-align-center padding-top-60">
+                            <div class="six-columns padding-top-30" data-scroll data-scroll-speed="1">
+                                <div class="column-l-margin-40 scrollanim-activate" data-scroll
+                                     data-scroll-offset="20%">
+                                    <div class="anim-fade-to-top">
+                                        <h4 class="headline-xxxs text-color-black">{{ team.full_name }}</h4>
+                                        <div class="subhead-xxs text-color-black margin-top-5">{{ team.position }}</div>
+                                        <p class="body-text-xs text-color-6d6d6d margin-top-20">{{ team.description }}</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="six-columns padding-top-30" data-scroll data-scroll-speed="1">
-                            <div class="column-l-margin-40 scrollanim-activate" data-scroll
-                                 data-scroll-offset="20%">
-                                <div class="anim-fade-to-top">
-                                    <h4 class="headline-xxxs text-color-black">{{ member.full_name }}n</h4>
-                                    <div class="subhead-xxs text-color-black margin-top-5">{{ member.position }}</div>
-                                    <p class="body-text-xs text-color-6d6d6d margin-top-20">{{ member.description }}</p>
+                            <div class="six-columns padding-top-30">
+                                <div class="hidden-box">
+                                    <div data-scroll data-scroll-speed="-1.2">
+                                        <div class="anim-img-reveal" data-scroll
+                                             style="background-image:url({% static team.image %})">
+                                            <img src='{% static team.image %}'
+                                                 alt="Jason Hardeman">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div><!-- flex-container end -->
+
+                        </div><!-- flex-container end -->
+                    {% else %}
+                        <div class="flex-container flex-align-center padding-top-60">
+                            <div class="six-columns padding-top-30">
+                                <div class="hidden-box">
+                                    <div data-scroll data-scroll-speed="-1.2">
+                                        <div class="anim-img-reveal" data-scroll
+                                             style="background-image:url({% static team.image %})">
+                                            <img src='{% static team.image %}'
+                                                 alt="Jason Hardeman">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="six-columns padding-top-30" data-scroll data-scroll-speed="1">
+                                <div class="column-l-margin-40 scrollanim-activate" data-scroll
+                                     data-scroll-offset="20%">
+                                    <div class="anim-fade-to-top">
+                                        <h4 class="headline-xxxs text-color-black">{{ team.full_name }}</h4>
+                                        <div class="subhead-xxs text-color-black margin-top-5">{{ team.position }}</div>
+                                        <p class="body-text-xs text-color-6d6d6d margin-top-20">{{ team.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div><!-- flex-container end -->
+                    {% endif %}
                 {% endfor %}
-            </section><!-- team end -->
+            </section><!-- teams end -->
 
             <!-- marquee start -->
             <section class="padding-top-bottom-30">
