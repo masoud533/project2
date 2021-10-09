@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import Http404
 from django.views.generic import TemplateView
 
-from .models import HomeSlider, Plans, Project, OurTeam
+from .models import HomeSlider, Plans, Project, OurTeam, WhoWeAre, WorkProcess, WhatWeDo, OurSkills
 
 
 # Create your views here.
@@ -11,11 +11,24 @@ class HomePageView(TemplateView):
     def get(self, request, **kwargs):
         slider_list = HomeSlider.objects.order_by('-pub_date')[:5]
         project_list = Project.objects.order_by('-pub_date')[:5]
-        team_members = OurTeam.objects.order_by('pk')
+        team_members = WhatWeDo.objects.order_by('pk')
+        what_we_do = WhatWeDo.objects.order_by('pk')[:5]
+        work_process = WorkProcess.objects.order_by('pk')[:4]
+        our_skills = OurSkills.objects.order_by('pk')[:5]
+        for skill in our_skills:
+            skill.feature = skill.feature.split('\r\n')[:3]
+
+        wo_we_are = WhoWeAre.objects.order_by('pk')[0]
+        wo_we_are.Strategy = wo_we_are.Strategy.split('\r\n')
+        wo_we_are.Development = wo_we_are.Development.split('\r\n')
         context = {
             'slider_list': slider_list,
             'project_list': project_list,
-            'team_members': team_members
+            'team_members': team_members,
+            'wo_we_are': wo_we_are,
+            'what_we_do': what_we_do,
+            'work_process': work_process,
+            'our_skills': our_skills,
 
         }
         return render(request, 'panel/index.html', context)

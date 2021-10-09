@@ -142,14 +142,7 @@
                 <!-- column start -->
                 <div class="eight-columns column-100-999 padding-top-20">
                     <p class="body-text-m text-color-dadada anim-split-lines" data-scroll
-                       data-scroll-offset="20%">Cloud bread cardigan messenger bag raw denim swag drinking
-                        vinegar. Pok pok authentic fashion axe, vegan venmo leggings raclette tousled twee
-                        tattooed. Banh mi humblebrag hammock tacos fashion axe aesthetic vegan sustainable
-                        taiyaki thundercats jean shorts tousled cloud bread waistcoat kogi. Banh mi humblebrag
-                        hammock tacos fashion axe aesthetic vegan sustainable taiyaki thundercats jean shorts
-                        tousled cloud bread waistcoat kogi. Cloud bread cardigan messenger bag raw denim swag
-                        drinking vinegar. Pok pok authentic fashion axe, vegan venmo leggings raclette tousled
-                        twee tattooed.</p>
+                       data-scroll-offset="20%">{{ wo_we_are.text }}</p>
                     <!-- flex-container start -->
                     <div class="flex-container">
                         <!-- column start -->
@@ -160,27 +153,12 @@
                                     <h3 class="headline-xxxxs">Strategy</h3>
                                     <!-- list start -->
                                     <ul class="list margin-top-20">
-                                        <li class="list__item dot">
-                                            <p class="subhead-xxs">Digital Strategy</p>
-                                        </li>
-                                        <li class="list__item dot">
-                                            <p class="subhead-xxs">Content Strategy</p>
-                                        </li>
-                                        <li class="list__item dot">
-                                            <p class="subhead-xxs">Responsive developement</p>
-                                        </li>
-                                        <li class="list__item dot">
-                                            <p class="subhead-xxs">Web Design</p>
-                                        </li>
-                                        <li class="list__item dot">
-                                            <p class="subhead-xxs">Motion Design</p>
-                                        </li>
-                                        <li class="list__item dot">
-                                            <p class="subhead-xxs">Data Analysis</p>
-                                        </li>
-                                        <li class="list__item dot">
-                                            <p class="subhead-xxs">Brand Experience</p>
-                                        </li>
+                                        {% for item in wo_we_are.Strategy %}
+                                            <li class="list__item dot">
+                                                <p class="subhead-xxs">{{ item }}</p>
+                                            </li>
+                                        {% endfor %}
+
                                     </ul><!-- list end -->
                                 </div>
                             </div>
@@ -193,27 +171,13 @@
                                     <h3 class="headline-xxxxs">Development</h3>
                                     <!-- list start -->
                                     <ul class="list list_counter margin-top-20">
-                                        <li class="list__item opacity-05">
-                                            <p class="subhead-xxs">Design Direction</p>
-                                        </li>
-                                        <li class="list__item opacity-05">
-                                            <p class="subhead-xxs">Web and Mobile UI</p>
-                                        </li>
-                                        <li class="list__item opacity-05">
-                                            <p class="subhead-xxs">Creative Concepts & Ideas</p>
-                                        </li>
-                                        <li class="list__item opacity-05">
-                                            <p class="subhead-xxs">User Experience Design</p>
-                                        </li>
-                                        <li class="list__item opacity-05">
-                                            <p class="subhead-xxs">Branding & Identity</p>
-                                        </li>
-                                        <li class="list__item opacity-05">
-                                            <p class="subhead-xxs">Websites & Web Applications</p>
-                                        </li>
-                                        <li class="list__item opacity-05">
-                                            <p class="subhead-xxs">E-Commerce</p>
-                                        </li>
+
+                                        {% for item in wo_we_are.Development %}
+                                            <li class="list__item opacity-05">
+                                                <p class="subhead-xxs">{{ item }}</p>
+                                            </li>
+                                        {% endfor %}
+
                                     </ul><!-- list end -->
                                 </div>
                             </div>
@@ -237,74 +201,20 @@
                 <!-- column start -->
                 <div class="eight-columns column-100-999 padding-top-60">
                     <div class="line-scrollanim-activate" data-scroll data-scroll-offset="30%">
-                        <!-- pos-rel start -->
-                        <div class="pos-rel padding-bottom-30">
-                            <div class="padding-left-50 pos-rel">
-                                <div class="subhead-xs pos-abs pos-left-top-0px">01</div>
-                                <h3 class="headline-xxxxs">Front-end Development</h3>
-                                <p class="body-text-xs text-color-dadada margin-top-10">Lomo dreamcatcher
-                                    bushwick gastropub swag. Hammock sriracha paleo, iPhone swag af flexitarian
-                                    hella pickled neutra pug. Trust fund chicharrones iPhone stumptown chia.
-                                    Godard 3 wolf moon tacos try-hard. Shoreditch cliche marfa godard gochujang
-                                    kinfolk hoodie you probably haven't heard of them echo park DIY tilde
-                                    PBR&B.</p>
-                            </div>
-                            <div class="anim-line-bottom"></div>
-                        </div><!-- pos-rel end -->
-                        <!-- pos-rel start -->
-                        <div class="pos-rel padding-bottom-30 padding-top-60">
-                            <div class="padding-left-50 pos-rel">
-                                <div class="subhead-xs pos-abs pos-left-top-0px">02</div>
-                                <h3 class="headline-xxxxs">Back-end Development</h3>
-                                <p class="body-text-xs text-color-dadada margin-top-10">Cloud bread cardigan
-                                    messenger bag raw denim swag drinking vinegar. Pok pok authentic fashion
-                                    axe, vegan venmo leggings raclette tousled twee tattooed. Banh mi humblebrag
-                                    hammock tacos fashion axe aesthetic vegan sustainable taiyaki thundercats
-                                    jean shorts tousled cloud bread waistcoat kogi.</p>
-                            </div>
-                            <div class="anim-line-bottom tr-delay-01"></div>
-                        </div><!-- pos-rel end -->
-                        <!-- pos-rel start -->
-                        <div class="pos-rel padding-bottom-30 padding-top-60">
-                            <div class="padding-left-50 pos-rel">
-                                <div class="subhead-xs pos-abs pos-left-top-0px">03</div>
-                                <h3 class="headline-xxxxs">User Interface Design</h3>
-                                <p class="body-text-xs text-color-dadada margin-top-10">Pitchfork green juice
-                                    meh ethical slow-carb poke authentic salvia skateboard helvetica tousled
-                                    bicycle rights ennui. Hot chicken ugh drinking vinegar, edison bulb
-                                    dreamcatcher meh craft beer offal tousled gluten-free locavore. Franzen
-                                    schlitz gochujang organic +1, godard tacos. Whatever heirloom lyft drinking
-                                    vinegar.</p>
-                            </div>
-                            <div class="anim-line-bottom tr-delay-02"></div>
-                        </div><!-- pos-rel end -->
-                        <!-- pos-rel start -->
-                        <div class="pos-rel padding-bottom-30 padding-top-60">
-                            <div class="padding-left-50 pos-rel">
-                                <div class="subhead-xs pos-abs pos-left-top-0px">04</div>
-                                <h3 class="headline-xxxxs">User Experience Design</h3>
-                                <p class="body-text-xs text-color-dadada margin-top-10">Pinterest lumbersexual
-                                    forage chillwave godard pitchfork vexillologist deep v chia truffaut four
-                                    dollar toast food truck meditation. Hot chicken coloring book cliche YOLO,
-                                    crucifix kale chips swag hexagon raclette paleo next level austin. Yuccie
-                                    thundercats irony. Godard 3 wolf moon edison bulb dreamcatcher meh tacos
-                                    try-hard.</p>
-                            </div>
-                            <div class="anim-line-bottom tr-delay-03"></div>
-                        </div><!-- pos-rel end -->
-                        <!-- pos-rel start -->
-                        <div class="pos-rel padding-bottom-30 padding-top-60">
-                            <div class="padding-left-50 pos-rel">
-                                <div class="subhead-xs pos-abs pos-left-top-0px">05</div>
-                                <h3 class="headline-xxxxs">Motion Design</h3>
-                                <p class="body-text-xs text-color-dadada margin-top-10">Shoreditch cliche marfa
-                                    godard gochujang kinfolk hoodie you probably haven't heard of them echo park
-                                    DIY tilde PBR&B. Lomo dreamcatcher bushwick gastropub swag. Hammock sriracha
-                                    paleo, iPhone swag af flexitarian hella pickled neutra pug. Trust fund
-                                    chicharrones iPhone stumptown chia. Godard 3 wolf moon.</p>
-                            </div>
-                            <div class="anim-line-bottom tr-delay-04"></div>
-                        </div><!-- pos-rel end -->
+                        {% for item in what_we_do %}
+                            <!-- pos-rel start -->
+                            <div class="pos-rel padding-bottom-30">
+                                <div class="padding-left-50 pos-rel">
+                                    <div class="subhead-xs pos-abs pos-left-top-0px">0{{ item.pk }}</div>
+                                    <h3 class="headline-xxxxs">{{ item.title }}</h3>
+                                    <p class="body-text-xs text-color-dadada margin-top-10">{{ item.text }}</p>
+                                </div>
+                                <div class="anim-line-bottom"></div>
+                                <br>
+                                <br>
+                            </div><!-- pos-rel end -->
+                        {% endfor %}
+
                     </div>
                 </div><!-- column end -->
             </section><!-- flex-container end -->
@@ -325,67 +235,19 @@
                 <div class="eight-columns column-100-999">
                     <!-- flex-container start -->
                     <div class="flex-container">
-                        <!-- column start -->
-                        <div class="six-columns padding-top-60">
-                            <div class="column-r-margin-40 scrollanim-activate" data-scroll
-                                 data-scroll-offset="20%">
-                                <div class="anim-fade-to-left">
-                                    <div class="subhead-xs">01</div>
-                                    <h3 class="headline-xxxxs margin-top-30">Brainstorming</h3>
-                                    <p class="body-text-xs text-color-dadada margin-top-20">Pok pok authentic
-                                        fashion axe, vegan venmo leggings raclette tousled twee tattooed. Banh
-                                        mi humblebrag hammock tacos fashion axe aesthetic vegan sustainable
-                                        taiyaki thundercats jean shorts tousled cloud bread waistcoat kogi.
-                                        Cloud bread cardigan messenger bag raw denim swag drinking vinegar.</p>
+                        {% for item in work_process %}
+                            <!-- column start -->
+                            <div class="six-columns padding-top-60">
+                                <div class="column-r-margin-40 scrollanim-activate" data-scroll
+                                     data-scroll-offset="20%">
+                                    <div class="anim-fade-to-left">
+                                        <div class="subhead-xs">0{{ item.pk }}</div>
+                                        <h3 class="headline-xxxxs margin-top-30">{{ item.title }}</h3>
+                                        <p class="body-text-xs text-color-dadada margin-top-20">{{ item.text }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div><!-- column end -->
-                        <!-- column start -->
-                        <div class="six-columns padding-top-60">
-                            <div class="column-r-margin-40 scrollanim-activate" data-scroll
-                                 data-scroll-offset="20%">
-                                <div class="anim-fade-to-left tr-delay-01">
-                                    <div class="subhead-xs">02</div>
-                                    <h3 class="headline-xxxxs margin-top-30">Approaching</h3>
-                                    <p class="body-text-xs text-color-dadada margin-top-20">Vegan venmo leggings
-                                        raclette tousled twee tattooed. Banh mi humblebrag hammock tacos fashion
-                                        axe aesthetic vegan sustainable taiyaki thundercats jean shorts tousled
-                                        cloud bread waistcoat kogi. Cloud bread cardigan messenger bag raw denim
-                                        swag drinking vinegar Pok pok authentic fashion axe.</p>
-                                </div>
-                            </div>
-                        </div><!-- column end -->
-                        <!-- column start -->
-                        <div class="six-columns padding-top-60">
-                            <div class="column-r-margin-40 scrollanim-activate" data-scroll
-                                 data-scroll-offset="20%">
-                                <div class="anim-fade-to-left">
-                                    <div class="subhead-xs">03</div>
-                                    <h3 class="headline-xxxxs margin-top-30">Adjusting</h3>
-                                    <p class="body-text-xs text-color-dadada margin-top-20">Banh mi humblebrag
-                                        hammock tacos fashion axe aesthetic vegan sustainable taiyaki
-                                        thundercats jean shorts tousled cloud bread waistcoat kogi. Cloud bread
-                                        cardigan messenger bag raw denim swag drinking vinegar. Pok pok
-                                        authentic fashion axe, vegan venmo leggings raclette tousled twee
-                                        tattooed.</p>
-                                </div>
-                            </div>
-                        </div><!-- column end -->
-                        <!-- column start -->
-                        <div class="six-columns padding-top-60">
-                            <div class="column-r-margin-40 scrollanim-activate" data-scroll
-                                 data-scroll-offset="20%">
-                                <div class="anim-fade-to-left tr-delay-01">
-                                    <div class="subhead-xs">04</div>
-                                    <h3 class="headline-xxxxs margin-top-30">Result</h3>
-                                    <p class="body-text-xs text-color-dadada margin-top-20">Cloud bread cardigan
-                                        messenger bag raw denim swag drinking vinegar. Pok pok authentic fashion
-                                        axe, vegan venmo leggings raclette tousled twee tattooed. Banh mi
-                                        humblebrag hammock tacos fashion axe aesthetic vegan sustainable taiyaki
-                                        thundercats jean shorts tousled cloud bread waistcoat kogi.</p>
-                                </div>
-                            </div>
-                        </div><!-- column end -->
+                            </div><!-- column end -->
+                        {% endfor %}
                     </div><!-- flex-container end -->
                 </div><!-- column end -->
             </section><!-- flex-container end -->
@@ -405,112 +267,25 @@
                 <!-- column start -->
                 <div class="eight-columns column-100-999 padding-top-60">
                     <div class="line-scrollanim-activate" data-scroll data-scroll-offset="30%">
-                        <!-- pos-rel start -->
-                        <div class="pos-rel">
-                            <div class="anim-line-top"></div>
-                            <div class="d-flex flex-wrap flex-align-center padding-bottom-10">
-                                <div class="headline-xxxxl text-stroke-white skills-5-col padding-top-10"
-                                     style="direction: ltr; text-align: right;">+45
+                        {% for item in our_skills %}
+                            <!-- pos-rel start -->
+                            <div class="pos-rel">
+                                <div class="anim-line-top"></div>
+                                <div class="d-flex flex-wrap flex-align-center padding-bottom-10">
+                                    <div class="headline-xxxxl text-stroke-white skills-5-col padding-top-10"
+                                         style="direction: ltr; text-align: right;">{{ item.counter }}</div>
+                                    <h4 class="headline-xxxxs skills-4-col padding-top-10">{{ item.title }}</h4>
+                                    <ul class="list skills-3-col subhead-xxs padding-top-10">
+                                        {% for feature in item.feature %}
+                                            <li class="list__item dot">
+                                                <p>{{ feature }}</p>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
                                 </div>
-                                <h4 class="headline-xxxxs skills-4-col padding-top-10">Awwwards</h4>
-                                <ul class="list skills-3-col subhead-xxs padding-top-10">
-                                    <li class="list__item dot">
-                                        <p>Best agency</p>
-                                    </li>
-                                    <li class="list__item dot">
-                                        <p>Best website</p>
-                                    </li>
-                                    <li class="list__item dot">
-                                        <p>Best freelancer</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="anim-line-bottom tr-delay-01"></div>
-                        </div><!-- pos-rel end -->
-                        <!-- pos-rel start -->
-                        <div class="pos-rel">
-                            <div class="d-flex flex-wrap flex-align-center padding-bottom-10">
-                                <div class="headline-xxxxl text-stroke-white skills-5-col padding-top-10"
-                                     style="direction: ltr; text-align: right;">+532
-                                </div>
-                                <h4 class="headline-xxxxs skills-4-col padding-top-10">Projects</h4>
-                                <ul class="list skills-3-col subhead-xxs padding-top-10">
-                                    <li class="list__item dot">
-                                        <p>Branding</p>
-                                    </li>
-                                    <li class="list__item dot">
-                                        <p>Web design</p>
-                                    </li>
-                                    <li class="list__item dot">
-                                        <p>Web development</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="anim-line-bottom tr-delay-02"></div>
-                        </div><!-- pos-rel end -->
-                        <!-- pos-rel start -->
-                        <div class="pos-rel">
-                            <div class="d-flex flex-wrap flex-align-center padding-bottom-10">
-                                <div class="headline-xxxxl text-stroke-white skills-5-col padding-top-10"
-                                     style="direction: ltr; text-align: right;">100%
-                                </div>
-                                <h4 class="headline-xxxxs skills-4-col padding-top-10">Requirement</h4>
-                                <ul class="list skills-3-col subhead-xxs padding-top-10">
-                                    <li class="list__item dot">
-                                        <p>HTML/CSS</p>
-                                    </li>
-                                    <li class="list__item dot">
-                                        <p>JavaScript</p>
-                                    </li>
-                                    <li class="list__item dot">
-                                        <p>WordPress</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="anim-line-bottom tr-delay-03"></div>
-                        </div><!-- pos-rel end -->
-                        <!-- pos-rel start -->
-                        <div class="pos-rel">
-                            <div class="d-flex flex-wrap flex-align-center padding-bottom-10">
-                                <div class="headline-xxxxl text-stroke-white skills-5-col padding-top-10"
-                                     style="direction: ltr; text-align: right;">30k
-                                </div>
-                                <h4 class="headline-xxxxs skills-4-col padding-top-10">Subscribers</h4>
-                                <ul class="list skills-3-col subhead-xxs padding-top-10">
-                                    <li class="list__item dot">
-                                        <p>Instagram</p>
-                                    </li>
-                                    <li class="list__item dot">
-                                        <p>Behance</p>
-                                    </li>
-                                    <li class="list__item dot">
-                                        <p>Youtube</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="anim-line-bottom tr-delay-04"></div>
-                        </div><!-- pos-rel end -->
-                        <!-- pos-rel start -->
-                        <div class="pos-rel">
-                            <div class="d-flex flex-wrap flex-align-center padding-bottom-10">
-                                <div class="headline-xxxxl text-stroke-white skills-5-col padding-top-10"
-                                     style="direction: ltr; text-align: right;">265
-                                </div>
-                                <h4 class="headline-xxxxs skills-4-col padding-top-10">Clients</h4>
-                                <ul class="list skills-3-col subhead-xxs padding-top-10">
-                                    <li class="list__item dot">
-                                        <p>Branding & Identity</p>
-                                    </li>
-                                    <li class="list__item dot">
-                                        <p>Digital Strategy</p>
-                                    </li>
-                                    <li class="list__item dot">
-                                        <p>Creative Concepts & Ideas</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="anim-line-bottom tr-delay-05"></div>
-                        </div><!-- pos-rel end -->
+                                <div class="anim-line-bottom tr-delay-01"></div>
+                            </div><!-- pos-rel end -->
+                        {% endfor %}
                     </div>
                 </div><!-- column end -->
             </section><!-- flex-container end -->

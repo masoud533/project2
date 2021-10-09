@@ -1,216 +1,241 @@
 {% extends 'panel/base.html' %}
 {% load static %}
 {% block main %}
-<div class="section-bg-light" data-scroll-section>
-	<!-- pricing start -->
-	<section class="container small padding-top-bottom-120">
-		<h2 class="headline-xxxl text-color-black anim-split-lines" data-scroll data-scroll-offset="20%">پرداخت ماهانه</h2>
+    <div class="section-bg-light" data-scroll-section>
+        <!-- pricing start -->
+        <section class="container small padding-top-bottom-120">
+            <h2 class="headline-xxxl text-color-black anim-split-lines" data-scroll data-scroll-offset="20%">پرداخت
+                ماهانه</h2>
 
-		<!-- flex-container start -->
-		<div class="flex-container flex-justify-center">
-            {% for plan in plans_list %}
-			<!-- column start -->
-			<div class="four-columns column-50-999 padding-top-90">
-				<div class="column-l-r-margin-10 price-border black border-radius-10px">
-					<div class="text-center">
-						<h3 class="headline-xxxxs text-color-black headline-uppercase padding-top-bottom-20">{{ plan.title }}</h3>
-					</div>
-					<h4 class="text-center padding-top-bottom-40 price-title-border black">
-						<span class="headline-l text-color-black">{{ plan.price }} تومان </span><br>
-						<span class="subhead-s text-color-black">در ماه</span>
-					</h4>
-					<!-- list start -->
-					<ul class="list list_center list_margin-20px text-color-6d6d6d subhead-xs margin-left-right-20 padding-top-bottom-60">
-						{% for feature in plan.feature %}
-                        <li class="list__item check black">
-							<p>{{ feature }}</p>
-						</li>
-                        {% endfor %}
-					</ul><!-- list end -->
-					<div class="text-center padding-bottom-60">
-						<a href="/payment?id={{ plan.id }}" class="border-btn black js-pointer-large">
-							<span class="border-btn__inner">سفارش</span>
-							<span class="border-btn__lines-1"></span>
-							<span class="border-btn__lines-2"></span>
-						</a>
-					</div>
-				</div>
-			</div><!-- column end -->
-            {% endfor %}
-		</div><!-- flex-container end -->
-	</section><!-- pricing end -->
+            <!-- flex-container start -->
+            <div class="flex-container flex-justify-center">
+                {% for plan in plans_list %}
+                    {% if plan.count_type == 'M' %}
+                        <!-- column start -->
+                        <div class="four-columns column-50-999 padding-top-90">
+                            <div class="column-l-r-margin-10 price-border black border-radius-10px">
+                                <div class="text-center">
+                                    <h3 class="headline-xxxxs text-color-black headline-uppercase padding-top-bottom-20">{{ plan.title }}</h3>
+                                </div>
+                                <h4 class="text-center padding-top-bottom-40 price-title-border black">
+                                    <span class="headline-l text-color-black">{{ plan.price }} تومان </span><br>
+                                    <span class="subhead-s text-color-black">در ماه</span>
+                                </h4>
+                                <!-- list start -->
+                                <ul class="list list_center list_margin-20px text-color-6d6d6d subhead-xs margin-left-right-20 padding-top-bottom-60">
+                                    {% for feature in plan.feature %}
+                                        <li class="list__item check black">
+                                            <p>{{ feature }}</p>
+                                        </li>
+                                    {% endfor %}
+                                </ul><!-- list end -->
+                                <div class="text-center padding-bottom-60">
+                                    <a href="/payment?id={{ plan.id }}" class="border-btn black js-pointer-large">
+                                        <span class="border-btn__inner">سفارش</span>
+                                        <span class="border-btn__lines-1"></span>
+                                        <span class="border-btn__lines-2"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div><!-- column end -->
+                    {% endif %}
+                {% endfor %}
+            </div><!-- flex-container end -->
+        </section><!-- pricing end -->
 
-	<!-- pricing start -->
-	<section class="container small padding-top-bottom-120">
-		<h2 class="headline-xxxl text-color-black anim-split-lines" data-scroll data-scroll-offset="20%">پرداخت سالانه</h2>
+        <!-- pricing start -->
+        <section class="container small padding-top-bottom-120">
+            <h2 class="headline-xxxl text-color-black anim-split-lines" data-scroll data-scroll-offset="20%">پرداخت
+                سالانه</h2>
 
-		<!-- flex-container start -->
-		<div class="flex-container flex-justify-center">
-            {% for plan in plans_list %}
-			<!-- column start -->
-			<div class="four-columns column-50-999 padding-top-90">
-				<div class="column-l-r-margin-10 price-border black border-radius-10px">
-					<div class="text-center">
-						<h3 class="headline-xxxxs text-color-black headline-uppercase padding-top-bottom-20">{{ plan.title }}</h3>
-					</div>
-					<h4 class="text-center padding-top-bottom-40 price-title-border black">
-						<span class="headline-l text-color-black">{{ plan.price }} تومان </span><br>
-						<span class="subhead-s text-color-black">در سال</span>
-					</h4>
-					<!-- list start -->
-					<ul class="list list_center list_margin-20px text-color-6d6d6d subhead-xs margin-left-right-20 padding-top-bottom-60">
-						{% for feature in plan.feature %}
-                        <li class="list__item check black">
-							<p>{{ feature }}</p>
-						</li>
-                        {% endfor %}
-					</ul><!-- list end -->
-					<div class="text-center padding-bottom-60">
-						<a href="/payment?id={{ plan.id }}" class="border-btn black js-pointer-large">
-							<span class="border-btn__inner">سفارش</span>
-							<span class="border-btn__lines-1"></span>
-							<span class="border-btn__lines-2"></span>
-						</a>
-					</div>
-				</div>
-			</div><!-- column end -->
-            {% endfor %}
-		</div><!-- flex-container end -->
-	</section><!-- pricing end -->
+            <!-- flex-container start -->
+            <div class="flex-container flex-justify-center">
+                {% for plan in plans_list %}
+                    {% if plan.count_type == 'Y' %}
 
-	<!-- marquee start -->
-	<div class="padding-top-bottom-30">
-		<div class="padding-top-bottom-90 pos-rel">
-			<div class="line-top black"></div>
-			<!-- marquee start -->
-			<div class="marquee headline-xxxxl headline-uppercase text-color-black hidden-box" data-duration="20000" data-gap="20">
-				<span class="text-stroke-black">Design</span> /
-				Experience /
-				<span class="text-stroke-black">Strategy</span> /
-				Creative / Branding /
-				<span class="text-stroke-black">Identity</span> /
-				Digital /
-				<span class="text-stroke-black">Ideas</span> /
-				Development /
-			</div><!-- marquee end -->
-			<div class="line-bottom black"></div>
-		</div>
-	</div><!-- marquee end -->
-	
-</div>
-	
+                        <!-- column start -->
+                        <div class="four-columns column-50-999 padding-top-90">
+                            <div class="column-l-r-margin-10 price-border black border-radius-10px">
+                                <div class="text-center">
+                                    <h3 class="headline-xxxxs text-color-black headline-uppercase padding-top-bottom-20">{{ plan.title }}</h3>
+                                </div>
+                                <h4 class="text-center padding-top-bottom-40 price-title-border black">
+                                    <span class="headline-l text-color-black">{{ plan.price }} تومان </span><br>
+                                    <span class="subhead-s text-color-black">در سال</span>
+                                </h4>
+                                <!-- list start -->
+                                <ul class="list list_center list_margin-20px text-color-6d6d6d subhead-xs margin-left-right-20 padding-top-bottom-60">
+                                    {% for feature in plan.feature %}
+                                        <li class="list__item check black">
+                                            <p>{{ feature }}</p>
+                                        </li>
+                                    {% endfor %}
+                                </ul><!-- list end -->
+                                <div class="text-center padding-bottom-60">
+                                    <a href="/payment?id={{ plan.id }}" class="border-btn black js-pointer-large">
+                                        <span class="border-btn__inner">سفارش</span>
+                                        <span class="border-btn__lines-1"></span>
+                                        <span class="border-btn__lines-2"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div><!-- column end -->
+                    {% endif %}
+                {% endfor %}
+            </div><!-- flex-container end -->
+        </section><!-- pricing end -->
 
-	<!-- section-bg-light start -->
-	<div class="section-bg-light" data-scroll-section>
-		<!-- padding-top-bottom-30 start -->
-		<div class="padding-top-bottom-30">
+        <!-- marquee start -->
+        <div class="padding-top-bottom-30">
+            <div class="padding-top-bottom-90 pos-rel">
+                <div class="line-top black"></div>
+                <!-- marquee start -->
+                <div class="marquee headline-xxxxl headline-uppercase text-color-black hidden-box" data-duration="20000"
+                     data-gap="20">
+                    <span class="text-stroke-black">Design</span> /
+                    Experience /
+                    <span class="text-stroke-black">Strategy</span> /
+                    Creative / Branding /
+                    <span class="text-stroke-black">Identity</span> /
+                    Digital /
+                    <span class="text-stroke-black">Ideas</span> /
+                    Development /
+                </div><!-- marquee end -->
+                <div class="line-bottom black"></div>
+            </div>
+        </div><!-- marquee end -->
 
-			<!-- padding-top-bottom-30 start -->
-			<section class="padding-top-bottom-30">
-				<div class="padding-bottom-90 container small">
-					<h2 class="headline-m text-color-black anim-split-lines" data-scroll data-scroll-offset="20%">Our Skills</h2>
-				</div>
+    </div>
 
-				<!-- js-infinite-slider start -->
-				<div class="js-infinite-slider hidden-box pos-rel padding-top-bottom-60">
-					<div class="line-top black"></div>
-					<!-- swiper-wrapper start -->
-					<div class="swiper-wrapper">
-						<!-- swiper-slide start -->
-						<div class="swiper-slide text-center">
-							<img class="client-logo" src="assets/images/skills/c.png" alt="logo">
-						</div><!-- swiper-slide end -->
 
-						<!-- swiper-slide start -->
-						<div class="swiper-slide text-center">
-							<img class="client-logo" src="assets/images/skills/css.png" alt="logo">
-						</div><!-- swiper-slide end -->
+    <!-- section-bg-light start -->
+    <div class="section-bg-light" data-scroll-section>
+        <!-- padding-top-bottom-30 start -->
+        <div class="padding-top-bottom-30">
 
-						<!-- swiper-slide start -->
-						<div class="swiper-slide text-center">
-							<img class="client-logo" src="assets/images/skills/java.png" alt="logo">
-						</div><!-- swiper-slide end -->
+            <!-- padding-top-bottom-30 start -->
+            <section class="padding-top-bottom-30">
+                <div class="padding-bottom-90 container small">
+                    <h2 class="headline-m text-color-black anim-split-lines" data-scroll data-scroll-offset="20%">Our
+                        Skills</h2>
+                </div>
 
-						<!-- swiper-slide start -->
-						<div class="swiper-slide text-center">
-							<img class="client-logo" src="assets/images/skills/js.png" alt="logo">
-						</div><!-- swiper-slide end -->
+                <!-- js-infinite-slider start -->
+                <div class="js-infinite-slider hidden-box pos-rel padding-top-bottom-60">
+                    <div class="line-top black"></div>
+                    <!-- swiper-wrapper start -->
+                    <div class="swiper-wrapper">
+                        <!-- swiper-slide start -->
+                        <div class="swiper-slide text-center">
+                            <img class="client-logo" src="assets/images/skills/c.png" alt="logo">
+                        </div><!-- swiper-slide end -->
 
-						<!-- swiper-slide start -->
-						<div class="swiper-slide text-center">
-							<img class="client-logo" src="assets/images/skills/mysql.png" alt="logo">
-						</div><!-- swiper-slide end -->
+                        <!-- swiper-slide start -->
+                        <div class="swiper-slide text-center">
+                            <img class="client-logo" src="assets/images/skills/css.png" alt="logo">
+                        </div><!-- swiper-slide end -->
 
-						<!-- swiper-slide start -->
-						<div class="swiper-slide text-center">
-							<img class="client-logo" src="assets/images/skills/php.png" alt="logo">
-						</div><!-- swiper-slide end -->
+                        <!-- swiper-slide start -->
+                        <div class="swiper-slide text-center">
+                            <img class="client-logo" src="assets/images/skills/java.png" alt="logo">
+                        </div><!-- swiper-slide end -->
 
-						<!-- swiper-slide start -->
-						<div class="swiper-slide text-center">
-							<img class="client-logo" src="assets/images/skills/html.png" alt="logo">
-						</div><!-- swiper-slide end -->
+                        <!-- swiper-slide start -->
+                        <div class="swiper-slide text-center">
+                            <img class="client-logo" src="assets/images/skills/js.png" alt="logo">
+                        </div><!-- swiper-slide end -->
 
-						<!-- swiper-slide start -->
-						<div class="swiper-slide text-center">
-							<img class="client-logo" src="assets/images/skills/wp.png" alt="logo">
-						</div><!-- swiper-slide end -->
-					</div><!-- swiper-wrapper end -->
-					<div class="line-bottom black"></div>
-				</div><!-- js-infinite-slider end -->
-			</section><!-- padding-top-bottom-30 end -->
+                        <!-- swiper-slide start -->
+                        <div class="swiper-slide text-center">
+                            <img class="client-logo" src="assets/images/skills/mysql.png" alt="logo">
+                        </div><!-- swiper-slide end -->
 
-			<!-- work process start -->
-			<section class="container small padding-top-bottom-120">
-				<h2 class="headline-m text-color-black anim-split-lines" data-scroll data-scroll-offset="20%">Work Process</h2>
+                        <!-- swiper-slide start -->
+                        <div class="swiper-slide text-center">
+                            <img class="client-logo" src="assets/images/skills/php.png" alt="logo">
+                        </div><!-- swiper-slide end -->
 
-				<!-- flex-container start -->
-				<div class="flex-container padding-top-30">
-					<!-- column start -->
-					<div class="six-columns padding-top-60">
-						<div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
-							<div class="anim-fade-to-left">
-								<div class="subhead-xs text-color-black">01</div>
-								<h3 class="headline-xxxs text-color-black margin-top-30">Brainstorming</h3>
-								<p class="body-text-xs text-color-6d6d6d margin-top-20">Pok pok authentic fashion axe, vegan venmo leggings raclette tousled twee tattooed. Banh mi humblebrag hammock tacos fashion axe aesthetic vegan sustainable taiyaki thundercats jean shorts tousled cloud bread waistcoat kogi. Cloud bread cardigan messenger bag raw denim swag drinking vinegar.</p>
-							</div>
-						</div>
-					</div><!-- column end -->
-					<!-- column start -->
-					<div class="six-columns padding-top-60">
-						<div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
-							<div class="anim-fade-to-left tr-delay-01">
-								<div class="subhead-xs text-color-black">02</div>
-								<h3 class="headline-xxxs text-color-black margin-top-30">Approaching</h3>
-								<p class="body-text-xs text-color-6d6d6d margin-top-20">Vegan venmo leggings raclette tousled twee tattooed. Banh mi humblebrag hammock tacos fashion axe aesthetic vegan sustainable taiyaki thundercats jean shorts tousled cloud bread waistcoat kogi. Cloud bread cardigan messenger bag raw denim swag drinking vinegar Pok pok authentic fashion axe.</p>
-							</div>
-						</div>
-					</div><!-- column end -->
-					<!-- column start -->
-					<div class="six-columns padding-top-60">
-						<div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
-							<div class="anim-fade-to-left">
-								<div class="subhead-xs text-color-black">03</div>
-								<h3 class="headline-xxxs text-color-black margin-top-30">Adjusting</h3>
-								<p class="body-text-xs text-color-6d6d6d margin-top-20">Banh mi humblebrag hammock tacos fashion axe aesthetic vegan sustainable taiyaki thundercats jean shorts tousled cloud bread waistcoat kogi. Cloud bread cardigan messenger bag raw denim swag drinking vinegar. Pok pok authentic fashion axe, vegan venmo leggings raclette tousled twee tattooed.</p>
-							</div>
-						</div>
-					</div><!-- column end -->
-					<!-- column start -->
-					<div class="six-columns padding-top-60">
-						<div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
-							<div class="anim-fade-to-left tr-delay-01">
-								<div class="subhead-xs text-color-black">04</div>
-								<h3 class="headline-xxxs text-color-black margin-top-30">Result</h3>
-								<p class="body-text-xs text-color-6d6d6d margin-top-20">Cloud bread cardigan messenger bag raw denim swag drinking vinegar. Pok pok authentic fashion axe, vegan venmo leggings raclette tousled twee tattooed. Banh mi humblebrag hammock tacos fashion axe aesthetic vegan sustainable taiyaki thundercats jean shorts tousled cloud bread waistcoat kogi.</p>
-							</div>
-						</div>
-					</div><!-- column end -->
-				</div><!-- flex-container end -->
-			</section><!-- work process end -->
+                        <!-- swiper-slide start -->
+                        <div class="swiper-slide text-center">
+                            <img class="client-logo" src="assets/images/skills/html.png" alt="logo">
+                        </div><!-- swiper-slide end -->
 
-			
+                        <!-- swiper-slide start -->
+                        <div class="swiper-slide text-center">
+                            <img class="client-logo" src="assets/images/skills/wp.png" alt="logo">
+                        </div><!-- swiper-slide end -->
+                    </div><!-- swiper-wrapper end -->
+                    <div class="line-bottom black"></div>
+                </div><!-- js-infinite-slider end -->
+            </section><!-- padding-top-bottom-30 end -->
 
-		</div><!-- padding-top-bottom-30 end -->
-	</div><!-- section-bg-light end -->
-	{% endblock %}
+            <!-- work process start -->
+            <section class="container small padding-top-bottom-120">
+                <h2 class="headline-m text-color-black anim-split-lines" data-scroll data-scroll-offset="20%">Work
+                    Process</h2>
+
+                <!-- flex-container start -->
+                <div class="flex-container padding-top-30">
+                    <!-- column start -->
+                    <div class="six-columns padding-top-60">
+                        <div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
+                            <div class="anim-fade-to-left">
+                                <div class="subhead-xs text-color-black">01</div>
+                                <h3 class="headline-xxxs text-color-black margin-top-30">Brainstorming</h3>
+                                <p class="body-text-xs text-color-6d6d6d margin-top-20">Pok pok authentic fashion axe,
+                                    vegan venmo leggings raclette tousled twee tattooed. Banh mi humblebrag hammock
+                                    tacos fashion axe aesthetic vegan sustainable taiyaki thundercats jean shorts
+                                    tousled cloud bread waistcoat kogi. Cloud bread cardigan messenger bag raw denim
+                                    swag drinking vinegar.</p>
+                            </div>
+                        </div>
+                    </div><!-- column end -->
+                    <!-- column start -->
+                    <div class="six-columns padding-top-60">
+                        <div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
+                            <div class="anim-fade-to-left tr-delay-01">
+                                <div class="subhead-xs text-color-black">02</div>
+                                <h3 class="headline-xxxs text-color-black margin-top-30">Approaching</h3>
+                                <p class="body-text-xs text-color-6d6d6d margin-top-20">Vegan venmo leggings raclette
+                                    tousled twee tattooed. Banh mi humblebrag hammock tacos fashion axe aesthetic vegan
+                                    sustainable taiyaki thundercats jean shorts tousled cloud bread waistcoat kogi.
+                                    Cloud bread cardigan messenger bag raw denim swag drinking vinegar Pok pok authentic
+                                    fashion axe.</p>
+                            </div>
+                        </div>
+                    </div><!-- column end -->
+                    <!-- column start -->
+                    <div class="six-columns padding-top-60">
+                        <div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
+                            <div class="anim-fade-to-left">
+                                <div class="subhead-xs text-color-black">03</div>
+                                <h3 class="headline-xxxs text-color-black margin-top-30">Adjusting</h3>
+                                <p class="body-text-xs text-color-6d6d6d margin-top-20">Banh mi humblebrag hammock tacos
+                                    fashion axe aesthetic vegan sustainable taiyaki thundercats jean shorts tousled
+                                    cloud bread waistcoat kogi. Cloud bread cardigan messenger bag raw denim swag
+                                    drinking vinegar. Pok pok authentic fashion axe, vegan venmo leggings raclette
+                                    tousled twee tattooed.</p>
+                            </div>
+                        </div>
+                    </div><!-- column end -->
+                    <!-- column start -->
+                    <div class="six-columns padding-top-60">
+                        <div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
+                            <div class="anim-fade-to-left tr-delay-01">
+                                <div class="subhead-xs text-color-black">04</div>
+                                <h3 class="headline-xxxs text-color-black margin-top-30">Result</h3>
+                                <p class="body-text-xs text-color-6d6d6d margin-top-20">Cloud bread cardigan messenger
+                                    bag raw denim swag drinking vinegar. Pok pok authentic fashion axe, vegan venmo
+                                    leggings raclette tousled twee tattooed. Banh mi humblebrag hammock tacos fashion
+                                    axe aesthetic vegan sustainable taiyaki thundercats jean shorts tousled cloud bread
+                                    waistcoat kogi.</p>
+                            </div>
+                        </div>
+                    </div><!-- column end -->
+                </div><!-- flex-container end -->
+            </section><!-- work process end -->
+
+
+        </div><!-- padding-top-bottom-30 end -->
+    </div><!-- section-bg-light end -->
+{% endblock %}
