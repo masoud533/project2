@@ -1831,8 +1831,8 @@ body.js-page-in-anim-active.js-page-out .pointer {
 	overflow: hidden;
 	width: auto;
 	position: fixed;
-	left: 20px;
-	top:  20px;
+	left: -38px;
+    top: -19px;
 	z-index: 10;
 	pointer-events: none;
 	mix-blend-mode: difference;
@@ -1886,7 +1886,7 @@ body.js-page-in-anim-active.js-page-out .pointer {
 
 .header-logo__img {
 	width: auto;
-	height: 20px;
+	height: 200px;
 	vertical-align: top;
 	-webkit-transform: translateY(110%);
 	        transform: translateY(110%);
@@ -6015,17 +6015,12 @@ body .content-bg-dark .anim-img-reveal:before {
 /* 19.12. Split lines slide animation
    ========================================================================== */
 
-.animated-line-wrapper {
-	display: block;
-	overflow: hidden;
-}
 
 .animated-line-content {
 	display: block;
 	-webkit-transform: translateY(105%);
 	        transform: translateY(105%);
 	transition: 1s cubic-bezier(.17, .85, .438, .99);
-	transition-delay: calc(.15s * var(--line-index));
 }
 
 .js-page-in-anim-active .after-preloader-anim.anim-split-lines .animated-line-content,
@@ -6045,13 +6040,6 @@ body .content-bg-dark .anim-img-reveal:before {
 	pointer-events: auto;
 }
 
-.swiper-slide .animated-line-content {
-	transition-delay: calc(.15s * var(--line-index) + .7s);
-}
-
-.swiper-slide.swiper-slide-active .animated-line-content {
-	transition-delay: calc(.15s * var(--line-index) + 1.15s);
-}
 
 
 /* 19.13. Top/bottom lines animation
