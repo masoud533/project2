@@ -322,7 +322,7 @@ $(function() {
 				}
 			});
 
-			var teamSwiper = new Swiper ('.js-team-slider', {
+			var teamSwiper = new Swiper ('.js-teams-slider', {
 				slidesPerView: 1.3,
 				speed: 2000,
 				spaceBetween: 40,
