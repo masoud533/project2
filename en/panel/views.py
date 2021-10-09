@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import Http404
 from django.views.generic import TemplateView
 
-from .models import HomeSlider, Plans
+from .models import HomeSlider, Plans, Project
 
 
 # Create your views here.
@@ -10,11 +10,23 @@ from .models import HomeSlider, Plans
 class HomePageView(TemplateView):
     def get(self, request, **kwargs):
         slider_list = HomeSlider.objects.order_by('-pub_date')[:5]
+        project_list = Project.objects.order_by('-pub_date')[:5]
         print(len(slider_list))
         context = {
             'slider_list': slider_list,
+            'project_list': project_list
         }
         return render(request, 'panel/index.html', context)
+
+
+class ProjectPageView(TemplateView):
+    def get(self, request, **kwargs):
+        project_id = request.GET.get('id')
+        project = Project.objects.get(pk=project_id)
+        context = {
+            'project': project
+        }
+        return render(request, 'panel/project_01.html', context)
 
 
 class AboutPageView(TemplateView):
@@ -30,7 +42,6 @@ class ServicesPageView(TemplateView):
             'plans_list': plans_list,
         }
         return render(request, 'panel/services.html', context)
-
 
 
 class OtherServicesPageView(TemplateView):
@@ -50,4 +61,10 @@ class PortfolioPageView(TemplateView):
 
 
 class PaymentPageView(TemplateView):
-    template_name = "panel/payment.html"
+    def get(self, request, **kwargs):
+        project_id = request.GET.get('id')
+        plans = Plans.objects.get(pk=project_id)
+        context = {
+            'plans': plans,
+        }
+        return render(request, 'panel/payment.html', context)

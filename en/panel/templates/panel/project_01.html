@@ -5,14 +5,14 @@
 <section id="up" class="pos-rel hidden-box" data-scroll-section>
 	<div class="page-head-footer-overlay-fix" data-scroll data-scroll-repeat>
 		<!-- bg-parallax -->
-		<div class="bg-parallax" style="background-image:url(assets/images/portfolio/project_01/main.jpg)" data-scroll data-scroll-speed="-1.5"></div>
+		<div class="bg-parallax" style="background-image:url('{% static project.header_image %}'); }}" data-scroll data-scroll-speed="-1.5"></div>
 
 		<!-- flex-min-height-100vh start -->
 		<div class="flex-min-height-100vh">
 			<div class="padding-top-bottom-120 container text-center after-preloader-anim">
 				<h2 class="d-block headline-xxl headline-uppercase">
 					<span class="d-block" data-scroll data-scroll-speed="-0.4" data-scroll-position="top">
-						<span class="anim-chars-fadein">شرکت</span>
+						<span class="anim-chars-fadein">{{ project.title }}</span>
 					</span>
 				</h2>
 			</div>
@@ -36,143 +36,11 @@
 		<div class="container small padding-top-120">
 			<!-- flex-container start -->
 			<div class="flex-container padding-top-30 padding-bottom-90 pos-rel">
-				<!-- anim-line-top -->
-				<div class="anim-line-top black" data-scroll data-scroll-offset="20%"></div>
-				<!-- column start -->
-				<div class="four-columns padding-top-60">
-					<div class="column-r-margin-20 scrollanim-activate" data-scroll data-scroll-offset="20%">
-						<!-- list start -->
-						<ul class="list text-color-black anim-fade-to-left">
-							<li class="list__item dot black">
-								<div class="subhead-xs">Graphic Design</div>
-							</li>
-							<li class="list__item dot black">
-								<div class="subhead-xs">User Interface Design</div>
-							</li>
-							<li class="list__item dot black">
-								<div class="subhead-xs">User Experience Design</div>
-							</li>
-							<li class="list__item dot black">
-								<div class="subhead-xs">Web Design</div>
-							</li>
-							<li class="list__item dot black">
-								<div class="subhead-xs">Motion Design</div>
-							</li>
-							<li class="list__item dot black">
-								<div class="subhead-xs">Front-end Development</div>
-							</li>
-							<li class="list__item dot black">
-								<div class="subhead-xs">Back-end Development</div>
-							</li>
-						</ul><!-- list end -->
-					</div>
-				</div><!-- column end -->
-				<!-- column start -->
-				<div class="eight-columns padding-top-60">
-					<div class="scrollanim-activate" data-scroll data-scroll-offset="20%">
-						<p class="body-text-m text-color-6d6d6d anim-fade-to-left tr-delay-01">Godard slow-carb chartreuse occupy, tumblr letterpress pok pok tattooed yr lyft yuccie kinfolk. IPhone kombucha shaman gastropub snackwave 90's lo-fi pug chillwave pok pok tofu. Swag deep v listicle roof party seitan man braid raclette church-key trust fund locavore vexillologist green juice raw denim tilde meh. Austin thundercats locavore taiyaki snackwave hoodie put a bird on it tattooed selvage kitsch ramps.</p>
-					</div>
-				</div><!-- column end -->
-				<!-- column start -->
-				<div class="four-columns padding-top-60">
-					<div class="column-r-margin-20 scrollanim-activate" data-scroll data-scroll-offset="20%">
-						<h6 class="headline-xxxxs text-color-black anim-fade-to-left">Platforms</h6>
-						<!-- list start -->
-						<ul class="list text-color-black padding-top-20">
-							<li class="list__item">
-								<p class="subhead-xxs anim-fade-to-left tr-delay-01">Mobile</p>
-							</li>
-							<li class="list__item">
-								<p class="subhead-xxs anim-fade-to-left tr-delay-02">Tablet</p>
-							</li>
-							<li class="list__item">
-								<p class="subhead-xxs anim-fade-to-left tr-delay-03">Desktop</p>
-							</li>
-						</ul><!-- list end -->
-					</div>
-				</div><!-- column end -->
-				<!-- column start -->
-				<div class="four-columns padding-top-60">
-					<div class="column-r-margin-20 scrollanim-activate" data-scroll data-scroll-offset="20%">
-						<h6 class="headline-xxxxs text-color-black anim-fade-to-left">Awwwards</h6>
-						<!-- list start -->
-						<ul class="list text-color-black padding-top-20">
-							<li class="list__item">
-								<p class="subhead-xxs anim-fade-to-left tr-delay-01">Best Services</p>
-							</li>
-							<li class="list__item">
-								<p class="subhead-xxs anim-fade-to-left tr-delay-02">Best Website</p>
-							</li>
-							<li class="list__item">
-								<p class="subhead-xxs anim-fade-to-left tr-delay-03">Best Agency</p>
-							</li>
-						</ul><!-- list end -->
-					</div>
-				</div><!-- column end -->
-				<!-- column start -->
-				<div class="four-columns padding-top-60">
-					<div class="column-r-margin-20 scrollanim-activate" data-scroll data-scroll-offset="20%">
-						<h6 class="headline-xxxxs text-color-black anim-fade-to-left">Our role</h6>
-						<!-- list start -->
-						<ul class="list text-color-black padding-top-20">
-							<li class="list__item">
-								<p class="subhead-xxs anim-fade-to-left tr-delay-01">UX/UI Design</p>
-							</li>
-							<li class="list__item">
-								<p class="subhead-xxs anim-fade-to-left tr-delay-02">Web Development</p>
-							</li>
-							<li class="list__item">
-								<p class="subhead-xxs anim-fade-to-left tr-delay-03">Motion Design</p>
-							</li>
-						</ul><!-- list end -->
-					</div>
-				</div><!-- column end -->
-				<!-- anim-line-bottom -->
-				<div class="anim-line-bottom black" data-scroll data-scroll-offset="20%"></div>
+                    {{ project.content|safe }}
+
 			</div><!-- flex-container end -->
 		</div><!-- container end -->
 
-		<!-- flex-container start -->
-		<div class="flex-container container small padding-top-100">
-			<!-- column start -->
-			<div class="four-columns column-100-999 padding-top-20">
-				<div class="column-r-margin-20-999">
-					<h3 class="headline-xxs text-color-black anim-split-lines" data-scroll data-scroll-offset="20%">IPhone kombucha shaman gastropub</h3>
-				</div>
-			</div><!-- column end -->
-			<!-- column start -->
-			<div class="eight-columns column-100-999 padding-top-20">
-				<p class="body-text-m text-color-6d6d6d anim-split-lines" data-scroll data-scroll-offset="20%">IPhone kombucha shaman gastropub snackwave 90's lo-fi pug chillwave pok pok tofu. Swag deep v listicle roof party seitan man braid raclette church-key trust fund locavore vexillologist green juice raw denim tilde meh. Austin thundercats locavore taiyaki snackwave hoodie put a bird on it tattooed selvage kitsch ramps. Godard slow-carb chartreuse occupy, tumblr letterpress pok pok tattooed yr lyft yuccie kinfolk.</p>
-			</div><!-- column end -->
-		</div><!-- flex-container end -->
-
-		<!-- flex-container start -->
-		<div class="container flex-container padding-top-60">
-			<!-- column start -->
-			<div class="four-columns column-100-999 padding-top-60">
-				<a href="assets/images/portfolio/project_01/karsten-winegeart-_J3X-g-2KKc-unsplash.jpg" class="column-l-r-margin-10-999 d-block hidden-box js-pointer-zoom js-photo-popup">
-					<div class="scrollanim-activate" data-scroll data-scroll-speed="-1.3">
-						<img class="anim-opacity-scale" src="assets/images/portfolio/project_01/karsten-winegeart-_J3X-g-2KKc-unsplash.jpg" alt="project image">
-					</div>
-				</a>
-			</div><!-- column end -->
-			<!-- column start -->
-			<div class="four-columns column-100-999 padding-top-60">
-				<a href="assets/images/portfolio/project_01/karsten-winegeart-jKbSIaVcvpI-unsplash.jpg" class="column-l-r-margin-10-999 d-block hidden-box js-pointer-zoom js-photo-popup">
-					<div class="scrollanim-activate" data-scroll data-scroll-speed="-1.3">
-						<img class="anim-opacity-scale" src="assets/images/portfolio/project_01/karsten-winegeart-jKbSIaVcvpI-unsplash.jpg" alt="project image">
-					</div>
-				</a>
-			</div><!-- column end -->
-			<!-- column start -->
-			<div class="four-columns column-100-999 padding-top-60">
-				<a href="assets/images/portfolio/project_01/karsten-winegeart-ZiXqi1iSZyI-unsplash.jpg" class="column-l-r-margin-10-999 d-block hidden-box js-pointer-zoom js-photo-popup">
-					<div class="scrollanim-activate" data-scroll data-scroll-speed="-1.3">
-						<img class="anim-opacity-scale" src="assets/images/portfolio/project_01/karsten-winegeart-ZiXqi1iSZyI-unsplash.jpg" alt="project image">
-					</div>
-				</a>
-			</div><!-- column end -->
-		</div><!-- flex-container end -->
 	</div><!-- padding-top-bottom-120 end -->
 </section><!-- section-bg-light end -->
 {% endblock %}

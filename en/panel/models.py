@@ -1,8 +1,5 @@
-import json
-
 from django.db import models
 from datetime import datetime
-from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 
 
@@ -34,6 +31,7 @@ class Plans(models.Model):
     title = models.CharField(max_length=32)
     price = models.IntegerField()
     feature = models.TextField(blank=True)
+    month = models.CharField(max_length=32)
     pub_date = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):

@@ -28,4 +28,7 @@ urlpatterns = [
     # # ex: /payment
     path(r'payment/', views.PaymentPageView.as_view(), name='payment'),
 
+    # # ex: /project
+    path(r'project/', views.ProjectPageView.as_view(), name='project'),
+
 ]
