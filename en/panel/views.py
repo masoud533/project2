@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import Http404
 from django.views.generic import TemplateView
 
-from .models import HomeSlider, Plans, Project
+from .models import HomeSlider, Plans, Project, OurTeam
 
 
 # Create your views here.
@@ -11,10 +11,12 @@ class HomePageView(TemplateView):
     def get(self, request, **kwargs):
         slider_list = HomeSlider.objects.order_by('-pub_date')[:5]
         project_list = Project.objects.order_by('-pub_date')[:5]
-        print(len(slider_list))
+        team_members = OurTeam.objects.order_by('pk')
         context = {
             'slider_list': slider_list,
-            'project_list': project_list
+            'project_list': project_list,
+            'team_members': team_members
+
         }
         return render(request, 'panel/index.html', context)
 

@@ -36,3 +36,13 @@ class Plans(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class OurTeam(models.Model):
+    full_name = models.CharField(max_length=32)
+    image = models.ImageField(upload_to='panel/images/backgrounds/')
+    position = models.CharField(max_length=32)
+    description = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.full_name
