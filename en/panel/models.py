@@ -2,13 +2,28 @@ from django.db import models
 from datetime import datetime
 from ckeditor_uploader.fields import RichTextUploadingField
 
-
 # Create your models here.
+
+TYPE_CHOICES = (
+    ('M', 'Month'),
+    ('Y', 'Years'),
+)
+
 
 class HomeSlider(models.Model):
     title = models.CharField(max_length=32)
     slide_image = models.ImageField(upload_to='panel/images/backgrounds/')
-    slider_text = models.CharField(max_length=200)
+    slider_text = models.TextField(blank=True)
+    pub_date = models.DateTimeField(default=datetime.now, blank=True)
+
+    def __str__(self):
+        return self.title
+
+
+class BodySlider(models.Model):
+    title = models.CharField(max_length=32)
+    slide_image = models.ImageField(upload_to='panel/images/backgrounds/')
+    slider_text = models.TextField(blank=True)
     pub_date = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
@@ -25,12 +40,6 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
-
-
-TYPE_CHOICES = (
-    ('M', 'Month'),
-    ('Y', 'Years'),
-)
 
 
 class Plans(models.Model):
@@ -88,3 +97,38 @@ class OurSkills(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class FooterSwiper(models.Model):
+    text = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.text
+
+
+class About(models.Model):
+    title = models.CharField(max_length=32)
+    text = models.TextField(blank=True)
+    image = models.ImageField(upload_to='panel/images/backgrounds/')
+
+    def __str__(self):
+        return self.title
+
+
+class FeedBack(models.Model):
+    title = models.CharField(max_length=32)
+    text = models.TextField(blank=True)
+    full_name = models.CharField(max_length=32)
+    image = models.ImageField(upload_to='panel/images/avatars/')
+    position = models.CharField(max_length=32)
+
+    def __str__(self):
+        return self.title
+
+class OtherWorkProcess(models.Model):
+    title = models.CharField(max_length=32)
+    text = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.title
+

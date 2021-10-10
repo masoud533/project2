@@ -1,130 +1,57 @@
 {% extends 'panel/base.html' %}
 {% load static %}
 {% block main %}
-<!-- portfolio start -->
-<section class="pos-rel section-bg-dark" data-scroll-section>
-	<!-- js-carousel-slider-bg start -->
-	<div class="js-carousel-slider-bg content-bg-dark">
-		<!-- swiper-wrapper start -->
-		<div class="swiper-wrapper slider-scrollanim-activate" data-scroll>
-			<!-- swiper-slide start -->
-			<div class="swiper-slide height-100perc d-flex flex-align-center">
-				<div class="anim-scale margin-left-right-40">
-					<img class="anim-scale__inner" src="assets/images/portfolio/project_02/main.jpg" alt="Project">
-				</div>
-			</div><!-- swiper-slide end -->
+    <!-- portfolio start -->
+    <section class="pos-rel section-bg-dark" data-scroll-section>
+        <!-- js-carousel-slider-bg start -->
+        <div class="js-carousel-slider-bg content-bg-dark">
+            <!-- swiper-wrapper start -->
+            <div class="swiper-wrapper slider-scrollanim-activate" data-scroll>
+                {% for item in project_list %}
+                    <!-- swiper-slide start -->
+                    <div class="swiper-slide height-100perc d-flex flex-align-center">
+                        <div class="anim-scale margin-left-right-40">
+                            <img class="anim-scale__inner" src="{% static item.header_image %}"
+                                 alt="Project">
+                        </div>
+                    </div><!-- swiper-slide end -->
+                {% endfor %}
+            </div><!-- swiper-wrapper end -->
+        </div><!-- js-carousel-slider-bg end -->
 
-			<!-- swiper-slide start -->
-			<div class="swiper-slide height-100perc d-flex flex-align-center">
-				<div class="anim-scale margin-left-right-40">
-					<div class="anim-scale__inner">
-						<video src="http://www.nurseitmukaytegin.com/envato-templates/videos/matryoshka-dolls.mp4" class="width-100perc" muted loop autoplay playsinline poster="assets/images/portfolio/project_03/main.jpg"></video>
-					</div>
-				</div>
-			</div><!-- swiper-slide end -->
+        <!-- js-carousel-slider start -->
+        <div class="js-carousel-slider">
+            <!-- swiper-wrapper start -->
+            <div class="swiper-wrapper">
+                {% for item in project_list %}
+                    <!-- swiper-slide start -->
+                    <h2 class="swiper-slide d-flex flex-center-center text-center">
+                        <a href="project_02.html"
+                           class="headline-l anim-stroke-fill-white js-pointer-large js-animsition-link"
+                           data-text="">{{ item.title }}</a>
+                    </h2><!-- swiper-slide end -->
+                {% endfor %}
+            </div><!-- swiper-wrapper end -->
 
-			<!-- swiper-slide start -->
-			<div class="swiper-slide height-100perc d-flex flex-align-center">
-				<div class="anim-scale margin-left-right-40">
-					<img class="anim-scale__inner" src="assets/images/portfolio/project_04/main.jpg" alt="Project">
-				</div>
-			</div><!-- swiper-slide end -->
+            <!-- swiper-button-prev start -->
+            <div class="swiper-button-prev-box after-preloader-anim">
+                <div class="anim-fade-to-left tr-delay-03">
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div><!-- swiper-button-prev end -->
+            <!-- swiper-button-next start -->
+            <div class="swiper-button-next-box after-preloader-anim">
+                <div class="anim-fade-to-right tr-delay-03">
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div><!-- swiper-button-next end -->
 
-			<!-- swiper-slide start -->
-			<div class="swiper-slide height-100perc d-flex flex-align-center">
-				<div class="anim-scale margin-left-right-40">
-					<img class="anim-scale__inner" src="assets/images/portfolio/project_05/main.jpg" alt="Project">
-				</div>
-			</div><!-- swiper-slide end -->
-
-			<!-- swiper-slide start -->
-			<div class="swiper-slide height-100perc d-flex flex-align-center">
-				<div class="anim-scale margin-left-right-40">
-					<img class="anim-scale__inner" src="assets/images/portfolio/project_01/main.jpg" alt="Project">
-				</div>
-			</div><!-- swiper-slide end -->
-
-			<!-- swiper-slide start -->
-			<div class="swiper-slide height-100perc d-flex flex-align-center">
-				<div class="anim-scale margin-left-right-40">
-					<img class="anim-scale__inner" src="assets/images/portfolio/project_06/main.jpg" alt="Project">
-				</div>
-			</div><!-- swiper-slide end -->
-
-			<!-- swiper-slide start -->
-			<div class="swiper-slide height-100perc d-flex flex-align-center">
-				<div class="anim-scale margin-left-right-40">
-					<img class="anim-scale__inner" src="assets/images/portfolio/project_07/main.jpg" alt="Project">
-				</div>
-			</div><!-- swiper-slide end -->
-		</div><!-- swiper-wrapper end -->
-	</div><!-- js-carousel-slider-bg end -->
-
-	<!-- js-carousel-slider start -->
-	<div class="js-carousel-slider">
-		<!-- swiper-wrapper start -->
-		<div class="swiper-wrapper">
-			<!-- swiper-slide start -->
-			<h2 class="swiper-slide d-flex flex-center-center text-center">
-				<a href="project_02.html" class="headline-l anim-stroke-fill-white js-pointer-large js-animsition-link" data-text="Lil Man">Lil Man</a>
-			</h2><!-- swiper-slide end -->
-
-			<!-- swiper-slide start -->
-			<h2 class="swiper-slide d-flex flex-center-center text-center">
-				<a href="project_03.html" class="headline-l js-pointer-large js-animsition-link">
-					<span class="anim-stroke-fill-white" data-text="Matreshka">Matreshka</span><br>
-					<span class="anim-stroke-fill-white" data-text="Dolls">Dolls</span>
-				</a>
-			</h2><!-- swiper-slide end -->
-
-			<!-- swiper-slide start -->
-			<h2 class="swiper-slide d-flex flex-center-center text-center">
-				<a href="project_04.html" class="headline-l anim-stroke-fill-white js-pointer-large js-animsition-link" data-text="Kei Yamada">Kei Yamada</a>
-			</h2><!-- swiper-slide end -->
-
-			<!-- swiper-slide start -->
-			<h2 class="swiper-slide d-flex flex-center-center text-center">
-				<a href="project_05.html" class="headline-l anim-stroke-fill-white js-pointer-large js-animsition-link" data-text="Curology">Curology</a>
-			</h2><!-- swiper-slide end -->
-
-			<!-- swiper-slide start -->
-			<h2 class="swiper-slide d-flex flex-center-center text-center">
-				<a href="project_01.html" class="headline-l js-pointer-large js-animsition-link">
-					<span class="anim-stroke-fill-white" data-text="Champion">Champion</span><br>
-					<span class="anim-stroke-fill-white" data-text="Training">Training</span>
-				</a>
-			</h2><!-- swiper-slide end -->
-
-			<!-- swiper-slide start -->
-			<h2 class="swiper-slide d-flex flex-center-center text-center">
-				<a href="project_06.html" class="headline-l anim-stroke-fill-white js-pointer-large js-animsition-link" data-text="Sneakers">Sneakers</a>
-			</h2><!-- swiper-slide end -->
-
-			<!-- swiper-slide start -->
-			<h2 class="swiper-slide d-flex flex-center-center text-center">
-				<a href="project_07.html" class="headline-l anim-stroke-fill-white js-pointer-large js-animsition-link" data-text="Black Bike">Black Bike</a>
-			</h2><!-- swiper-slide end -->
-		</div><!-- swiper-wrapper end -->
-
-		<!-- swiper-button-prev start -->
-		<div class="swiper-button-prev-box after-preloader-anim">
-			<div class="anim-fade-to-left tr-delay-03">
-				<div class="swiper-button-prev"></div>
-			</div>
-		</div><!-- swiper-button-prev end -->
-		<!-- swiper-button-next start -->
-		<div class="swiper-button-next-box after-preloader-anim">
-			<div class="anim-fade-to-right tr-delay-03">
-				<div class="swiper-button-next"></div>
-			</div>
-		</div><!-- swiper-button-next end -->
-
-		<!-- swiper-pagination start -->
-		<div class="pagination-box after-preloader-anim">
-			<div class="anim-fade-to-top d-block tr-delay-06">
-				<div class="swiper-pagination"></div>
-			</div>
-		</div><!-- swiper-pagination end -->
-	</div><!-- js-carousel-slider end -->
-</section><!-- portfolio end -->
+            <!-- swiper-pagination start -->
+            <div class="pagination-box after-preloader-anim">
+                <div class="anim-fade-to-top d-block tr-delay-06">
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div><!-- swiper-pagination end -->
+        </div><!-- js-carousel-slider end -->
+    </section><!-- portfolio end -->
 {% endblock %}

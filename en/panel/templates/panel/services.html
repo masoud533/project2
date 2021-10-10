@@ -92,14 +92,8 @@
                 <!-- marquee start -->
                 <div class="marquee headline-xxxxl headline-uppercase text-color-black hidden-box" data-duration="20000"
                      data-gap="20">
-                    <span class="text-stroke-black">Design</span> /
-                    Experience /
-                    <span class="text-stroke-black">Strategy</span> /
-                    Creative / Branding /
-                    <span class="text-stroke-black">Identity</span> /
-                    Digital /
-                    <span class="text-stroke-black">Ideas</span> /
-                    Development /
+
+                    {{ footer_swiper }}
                 </div><!-- marquee end -->
                 <div class="line-bottom black"></div>
             </div>
@@ -176,62 +170,18 @@
 
                 <!-- flex-container start -->
                 <div class="flex-container padding-top-30">
-                    <!-- column start -->
-                    <div class="six-columns padding-top-60">
-                        <div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
-                            <div class="anim-fade-to-left">
-                                <div class="subhead-xs text-color-black">01</div>
-                                <h3 class="headline-xxxs text-color-black margin-top-30">Brainstorming</h3>
-                                <p class="body-text-xs text-color-6d6d6d margin-top-20">Pok pok authentic fashion axe,
-                                    vegan venmo leggings raclette tousled twee tattooed. Banh mi humblebrag hammock
-                                    tacos fashion axe aesthetic vegan sustainable taiyaki thundercats jean shorts
-                                    tousled cloud bread waistcoat kogi. Cloud bread cardigan messenger bag raw denim
-                                    swag drinking vinegar.</p>
+                    {% for item in work_process %}
+                        <!-- column start -->
+                        <div class="six-columns padding-top-60">
+                            <div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
+                                <div class="anim-fade-to-left">
+                                    <div class="subhead-xs text-color-black">0{{ item.pk }}</div>
+                                    <h3 class="headline-xxxs text-color-black margin-top-30">{{ item.title }}</h3>
+                                    <p class="body-text-xs text-color-6d6d6d margin-top-20">{{ item.text }}</p>
+                                </div>
                             </div>
-                        </div>
-                    </div><!-- column end -->
-                    <!-- column start -->
-                    <div class="six-columns padding-top-60">
-                        <div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
-                            <div class="anim-fade-to-left tr-delay-01">
-                                <div class="subhead-xs text-color-black">02</div>
-                                <h3 class="headline-xxxs text-color-black margin-top-30">Approaching</h3>
-                                <p class="body-text-xs text-color-6d6d6d margin-top-20">Vegan venmo leggings raclette
-                                    tousled twee tattooed. Banh mi humblebrag hammock tacos fashion axe aesthetic vegan
-                                    sustainable taiyaki thundercats jean shorts tousled cloud bread waistcoat kogi.
-                                    Cloud bread cardigan messenger bag raw denim swag drinking vinegar Pok pok authentic
-                                    fashion axe.</p>
-                            </div>
-                        </div>
-                    </div><!-- column end -->
-                    <!-- column start -->
-                    <div class="six-columns padding-top-60">
-                        <div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
-                            <div class="anim-fade-to-left">
-                                <div class="subhead-xs text-color-black">03</div>
-                                <h3 class="headline-xxxs text-color-black margin-top-30">Adjusting</h3>
-                                <p class="body-text-xs text-color-6d6d6d margin-top-20">Banh mi humblebrag hammock tacos
-                                    fashion axe aesthetic vegan sustainable taiyaki thundercats jean shorts tousled
-                                    cloud bread waistcoat kogi. Cloud bread cardigan messenger bag raw denim swag
-                                    drinking vinegar. Pok pok authentic fashion axe, vegan venmo leggings raclette
-                                    tousled twee tattooed.</p>
-                            </div>
-                        </div>
-                    </div><!-- column end -->
-                    <!-- column start -->
-                    <div class="six-columns padding-top-60">
-                        <div class="column-r-margin-40 scrollanim-activate" data-scroll data-scroll-offset="20%">
-                            <div class="anim-fade-to-left tr-delay-01">
-                                <div class="subhead-xs text-color-black">04</div>
-                                <h3 class="headline-xxxs text-color-black margin-top-30">Result</h3>
-                                <p class="body-text-xs text-color-6d6d6d margin-top-20">Cloud bread cardigan messenger
-                                    bag raw denim swag drinking vinegar. Pok pok authentic fashion axe, vegan venmo
-                                    leggings raclette tousled twee tattooed. Banh mi humblebrag hammock tacos fashion
-                                    axe aesthetic vegan sustainable taiyaki thundercats jean shorts tousled cloud bread
-                                    waistcoat kogi.</p>
-                            </div>
-                        </div>
-                    </div><!-- column end -->
+                        </div><!-- column end -->
+                    {% endfor %}
                 </div><!-- flex-container end -->
             </section><!-- work process end -->
 
