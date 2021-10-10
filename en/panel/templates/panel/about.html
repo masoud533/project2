@@ -59,7 +59,7 @@
         <div class="padding-top-bottom-30">
             <!-- clients start -->
             <section class="padding-top-bottom-120 container small">
-                <h2 class="headline-m anim-split-lines max-width-400" data-scroll data-scroll-offset="20%">شرکت هایی که
+                <h2 class="headline-m anim-split-lines max-width-500" data-scroll data-scroll-offset="20%">شرکت هایی که
                     با ما همکاری کرده اند</h2>
 
                 <!-- flex-container start -->
@@ -67,84 +67,84 @@
                     <!-- column start -->
                     <div class="three-columns padding-top-60">
                         <div class="text-center">
-                            <img class="client-logo" src="assets/images/clients/balancha.png" alt="clients logo">
+                            <img class="client-logo" src="{% static "panel/images/clients/balancha.png" %}" alt="clients logo">
                         </div>
                     </div><!-- column end -->
 
                     <!-- column start -->
                     <div class="three-columns padding-top-60">
                         <div class="text-center">
-                            <img class="client-logo" src="assets/images/clients/chayhana.png" alt="clients logo">
+                            <img class="client-logo" src="{% static "panel/images/clients/chayhana.png" %}" alt="clients logo">
                         </div>
                     </div><!-- column end -->
 
                     <!-- column start -->
                     <div class="three-columns padding-top-60">
                         <div class="text-center">
-                            <img class="client-logo" src="assets/images/clients/chimkirikter.png" alt="clients logo">
+                            <img class="client-logo" src="{% static "panel/images/clients/chimkirikter.png" %}" alt="clients logo">
                         </div>
                     </div><!-- column end -->
 
                     <!-- column start -->
                     <div class="three-columns padding-top-60">
                         <div class="text-center">
-                            <img class="client-logo" src="assets/images/clients/dongolok.png" alt="clients logo">
+                            <img class="client-logo" src="{% static "panel/images/clients/dongolok.png" %}" alt="clients logo">
                         </div>
                     </div><!-- column end -->
 
                     <!-- column start -->
                     <div class="three-columns padding-top-60">
                         <div class="text-center">
-                            <img class="client-logo" src="assets/images/clients/eptep-septep.png" alt="clients logo">
+                            <img class="client-logo" src="{% static "panel/images/clients/eptep-septep.png" %}" alt="clients logo">
                         </div>
                     </div><!-- column end -->
 
                     <!-- column start -->
                     <div class="three-columns padding-top-60">
                         <div class="text-center">
-                            <img class="client-logo" src="assets/images/clients/guldoyjan.png" alt="clients logo">
+                            <img class="client-logo" src="{% static "panel/images/clients/guldoyjan.png" %}" alt="clients logo">
                         </div>
                     </div><!-- column end -->
 
                     <!-- column start -->
                     <div class="three-columns padding-top-60">
                         <div class="text-center">
-                            <img class="client-logo" src="assets/images/clients/jorgo.png" alt="clients logo">
+                            <img class="client-logo" src="{% static "panel/images/clients/jorgo.png" %}" alt="clients logo">
                         </div>
                     </div><!-- column end -->
 
                     <!-- column start -->
                     <div class="three-columns padding-top-60">
                         <div class="text-center">
-                            <img class="client-logo" src="assets/images/clients/judoboy.png" alt="clients logo">
+                            <img class="client-logo" src="{% static "panel/images/clients/judoboy.png" %}" alt="clients logo">
                         </div>
                     </div><!-- column end -->
 
                     <!-- column start -->
                     <div class="three-columns padding-top-60">
                         <div class="text-center">
-                            <img class="client-logo" src="assets/images/clients/kizil-jindi.png" alt="clients logo">
+                            <img class="client-logo" src="{% static "panel/images/clients/kizil-jindi.png" %}" alt="clients logo">
                         </div>
                     </div><!-- column end -->
 
                     <!-- column start -->
                     <div class="three-columns padding-top-60">
                         <div class="text-center">
-                            <img class="client-logo" src="assets/images/clients/meyman.png" alt="clients logo">
+                            <img class="client-logo" src="{% static "panel/images/clients/meyman.png" %}" alt="clients logo">
                         </div>
                     </div><!-- column end -->
 
                     <!-- column start -->
                     <div class="three-columns padding-top-60">
                         <div class="text-center">
-                            <img class="client-logo" src="assets/images/clients/olchobay.png" alt="clients logo">
+                            <img class="client-logo" src="{% static "panel/images/clients/olchobay.png" %}" alt="clients logo">
                         </div>
                     </div><!-- column end -->
 
                     <!-- column start -->
                     <div class="three-columns padding-top-60">
                         <div class="text-center">
-                            <img class="client-logo" src="assets/images/clients/tamaktan.png" alt="clients logo">
+                            <img class="client-logo" src="{% static "panel/images/clients/tamaktan.png" %}" alt="clients logo">
                         </div>
                     </div><!-- column end -->
                 </div><!-- flex-container end -->
@@ -166,7 +166,7 @@
 
             <!-- testimonials start -->
             <section class="padding-top-bottom-120 container small">
-                <h2 class="headline-m anim-split-lines" data-scroll data-scroll-offset="20%">Client's Feedback</h2>
+                <h2 class="headline-m anim-split-lines" data-scroll data-scroll-offset="20%">بازخورد مشتری</h2>
 
                 <!-- pos-rel start -->
                 <div class="pos-rel padding-top-90 padding-bottom-90">
@@ -217,8 +217,7 @@
         <div class="padding-top-bottom-30">
             <!-- teams start -->
             <section class="padding-top-bottom-120 container small">
-                <h2 class="headline-xxxl text-color-black anim-split-lines" data-scroll data-scroll-offset="20%">Our
-                    Creative Team</h2>
+                <h2 class="headline-xxxl text-color-black anim-split-lines" data-scroll data-scroll-offset="20%">تیم خلاق ما</h2>
                 {% for team in team_members %}
                     <!-- flex-container start -->
                     {% if forloop.counter|divisibleby:2 %}
@@ -279,7 +278,7 @@
             <!-- skills start -->
             <section class="container small padding-top-bottom-30">
                 <h2 class="headline-m text-color-black text-color-black anim-split-lines" data-scroll
-                    data-scroll-offset="20%">Our Skills</h2>
+                    data-scroll-offset="20%">آمار و ارقام</h2>
 
                 <!-- padding-top-90 start -->
                 <div class="padding-top-90">
