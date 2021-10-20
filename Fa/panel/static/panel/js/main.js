@@ -140,7 +140,7 @@ $(function() {
 							var innerOffset = swiper.width * interleaveOffset;
 							var innerTranslate = slideProgress * innerOffset;
 							swiper.slides[i].querySelector(".js-parallax-slide-bg").style.transform =
-							"translate3d(" + innerTranslate + "px, 0, 0)";
+							"translate3d(0px, 0, 0)";
 						}
 					},
 					touchStart: function() {
@@ -225,7 +225,7 @@ $(function() {
 					dynamicBullets: true
 				},
 				thumbs: {
-					swiper: carouselSwiperBg
+					swiper: infiniteSwiper
 				}
 			});
 

@@ -963,8 +963,26 @@ pre code {
 }
 
 .container.small {
-	max-width: 960px;
+	max-width: 600px;
 	direction: rtl;
+}
+
+.style-text {
+	position: absolute;
+    top: 14px;
+    left: 100px;
+}
+
+.typed::before{
+    content: "|";
+    font-size: 150%;
+    line-height: 30px;
+    animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { color: transparent }
+    50% { color: rgba(245, 245, 245) }
 }
 
 @media only screen and (max-width: 999px) {
@@ -4970,6 +4988,13 @@ h6 {
 	line-height: 1.2;
 }
 
+.line {
+   -webkit-text-decoration-line: line-through; 
+   -webkit-text-decoration-color: red; 
+   text-decoration-line: line-through; 
+   text-decoration-color: red;
+}
+
 @media only screen and (max-width: 1199px) {
 
 	.headline-xxxxl {
@@ -6964,6 +6989,13 @@ textarea.form-input {
 }
 
 @media only screen and (max-width: 999px) {
+	
+
+.style-text {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+}
 
 	.grid-item-33-50-100,
 	.empty-grid-200px-33-50-none,
