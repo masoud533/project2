@@ -2,6 +2,10 @@
 en/.idea/
 en/config/settings.py
 en/panel/migrations/0*.py
+config/
+manage.py
+panel/
+static/
 # Created by https://www.toptal.com/developers/gitignore/api/django,pycharm,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,pycharm,python
 
