@@ -1,5 +1,6 @@
 /websaz/
-en/.idea/
+.idea/
+Fa/.idea/
 en/config/settings.py
 en/panel/migrations/0*.py
 config/
