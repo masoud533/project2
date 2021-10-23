@@ -3,6 +3,7 @@ from datetime import datetime
 from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
+from Fa.extensions.utils import jalali_converter
 
 TYPE_CHOICES = (
     ('M', 'Month'),
@@ -21,8 +22,11 @@ class HomeSlider(models.Model):
         verbose_name = "اسلایدر هدر صفحه اصلی"
         verbose_name_plural = "اسلایدر های هدر صفحه اصلی"
 
+    def jalali_pub_date(self):
+        return jalali_converter(self.pub_date)
     def __str__(self):
         return self.title
+
 
 
 class BodySlider(models.Model):
