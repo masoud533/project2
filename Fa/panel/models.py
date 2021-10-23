@@ -15,7 +15,7 @@ class HomeSlider(models.Model):
     title = models.CharField(max_length=32, verbose_name='عنوان')
     slide_image = models.FileField(upload_to='panel/images/backgrounds/', verbose_name='ویدیو')
     slider_text = models.TextField(blank=True, verbose_name='متن اسلایدر')
-    button_text = models.TextField(blank=True, verbose_name='متن دکمه')
+    button_text = models.TextField(blank=False, verbose_name='متن دکمه')
     button_link = models.CharField(max_length=64, verbose_name='لینک دکمه')
 
     pub_date = models.DateTimeField(default=datetime.now, blank=True, verbose_name='تاریخ انتشار')
