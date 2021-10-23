@@ -12,11 +12,11 @@ TYPE_CHOICES = (
 
 
 class HomeSlider(models.Model):
-    title = models.CharField(max_length=32, verbose_name = 'عنوان')
-    slide_image = models.ImageField(upload_to='panel/images/backgrounds/', verbose_name = 'ویدیو')
-    slider_text = models.TextField(blank=True, verbose_name = 'متن اسلایدر')
-    button_text = models.TextField(blank=True, verbose_name = 'متن دکمه')
-    pub_date = models.DateTimeField(default=datetime.now, blank=True, verbose_name = 'تاریخ انتشار')
+    title = models.CharField(max_length=32, verbose_name='عنوان')
+    slide_image = models.FileField(upload_to='panel/images/backgrounds/', verbose_name='ویدیو')
+    slider_text = models.TextField(blank=True, verbose_name='متن اسلایدر')
+    button_text = models.TextField(blank=True, verbose_name='متن دکمه')
+    pub_date = models.DateTimeField(default=datetime.now, blank=True, verbose_name='تاریخ انتشار')
 
     class Meta:
         verbose_name = "اسلایدر هدر صفحه اصلی"
@@ -24,16 +24,16 @@ class HomeSlider(models.Model):
 
     def jalali_pub_date(self):
         return jalali_converter(self.pub_date)
+
     def __str__(self):
         return self.title
 
 
-
 class BodySlider(models.Model):
-    title = models.CharField(max_length=32, verbose_name = 'عنوان')
-    slide_image = models.ImageField(upload_to='panel/images/backgrounds/', verbose_name = 'تصویر')
-    slider_text = models.TextField(blank=True, verbose_name = 'متن اسلایدر')
-    pub_date = models.DateTimeField(default=datetime.now, blank=True, verbose_name = 'تاریخ انتشار')
+    title = models.CharField(max_length=32, verbose_name='عنوان')
+    slide_image = models.ImageField(upload_to='panel/images/backgrounds/', verbose_name='تصویر')
+    slider_text = models.TextField(blank=True, verbose_name='متن اسلایدر')
+    pub_date = models.DateTimeField(default=datetime.now, blank=True, verbose_name='تاریخ انتشار')
 
     class Meta:
         verbose_name = "اسلایدر بدنه صفحه اصلی"
@@ -55,6 +55,9 @@ class Project(models.Model):
     class Meta:
         verbose_name = "پروژه"
         verbose_name_plural = "پروژه ها"
+
+    def jalali_pub_date(self):
+        return jalali_converter(self.pub_date)
 
     def __str__(self):
         return self.title
